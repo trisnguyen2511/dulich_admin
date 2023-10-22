@@ -16,15 +16,6 @@ export default function SiderCustom() {
 
   const items = [
     {
-      key: "tourHot",
-      icon: (
-        <Link to={"tourHot"}>
-          <FundProjectionScreenOutlined />
-        </Link>
-      ),
-      label: "Tour Hot",
-    },
-    {
       key: "tour",
       icon: (
         <NavLink to={"tour"}>
@@ -32,6 +23,15 @@ export default function SiderCustom() {
         </NavLink>
       ),
       label: "Tour",
+    },
+    {
+      key: "tourHot",
+      icon: (
+        <Link to={"tourHot"}>
+          <FundProjectionScreenOutlined />
+        </Link>
+      ),
+      label: "Tour Hot",
     },
     {
       key: "dataHeader",

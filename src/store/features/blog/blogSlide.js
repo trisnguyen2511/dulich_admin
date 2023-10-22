@@ -10,7 +10,7 @@ const initialState = {
 };
 
 export const GetToursAll = createAsyncThunk(
-    "post/GetToursAll",
+    "post/GetBlogAll",
     async (data, thunk) => {
         const response = await apiCategory.getAllTour();
         return response;

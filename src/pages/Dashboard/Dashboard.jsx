@@ -57,17 +57,17 @@ const DisabledRowsTable = () => {
   const { allTours } = useSelector(state => state.tour)
   const [selectedRowKeys, setSelectedRowKeys] = useState(["1"]);
   const [editAction, setEditAction] = useState(true)
-  
+
   const hasSelected = selectedRowKeys.length > 0;
- 
-  useEffect(()=>{
+
+  useEffect(() => {
     dispatch(GetToursAll())
     fetch(`${URLSERVE}/tour/getPaginationTour`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
-        return response.json(); 
+        return response.json();
       })
       .then(data => {
         setSelectedRowKeys(data.listSelected)
@@ -79,7 +79,7 @@ const DisabledRowsTable = () => {
   }, [dispatch])
 
   const start = () => {
-    setSelectedRowKeys([]);   
+    setSelectedRowKeys([]);
   };
 
   const callApi = () => {
@@ -102,7 +102,7 @@ const DisabledRowsTable = () => {
           Reload
         </Button>
         <Button type="primary" disabled={!hasSelected || editAction} onClick={callApi}>
-        Save
+          Save
         </Button>
         <Button type="primary" disabled={!editAction} onClick={handleEdit}>
           Edit
@@ -112,7 +112,7 @@ const DisabledRowsTable = () => {
         dataSource={allTours}
         columns={columns}
         rowSelection={{
-          type:"checkbox",
+          type: "checkbox",
           selectedRowKeys: selectedRowKeys,
           onChange: (selectedRowKeys) => {
             setSelectedRowKeys(selectedRowKeys);
@@ -120,11 +120,11 @@ const DisabledRowsTable = () => {
           getCheckboxProps: (record) => ({
             disabled: selectedRowKeys.length > 5 && !selectedRowKeys.includes(record.key) || editAction,
           }),
-          hideSelectAll:true
+          hideSelectAll: true
         }}
       />
     </div>
-   
+
   );
 };
 
