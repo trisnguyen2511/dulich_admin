@@ -1,4 +1,5 @@
-export const URLSERVE = "http://localhost:4000"
+// export const URLSERVE = "http://localhost:4000"
+export const URLSERVE = "https://dulich-backend.vercel.app"
 
 export const setRefresherTokenFormLC = (refresh_token) => {
   localStorage.setItem("refresh_token", refresh_token);
