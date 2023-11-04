@@ -4,21 +4,23 @@ import { Button, Form, Input } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllDataAboutHome, updateDataAboutHome } from '../../store/features/about/aboutSlice';
 
+const { TextArea } = Input;
+
 export default function AboutUsHome() {
   const dispatch = useDispatch();
   const { dataAboutHome } = useSelector(state => state.about)
   const [form] = Form.useForm();
 
   const onFinish = (values) => {
-   
+
     dispatch(updateDataAboutHome(values))
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     dispatch(getAllDataAboutHome())
-  },[])
+  }, [])
 
-  if (dataAboutHome){
+  if (dataAboutHome) {
     form.setFieldsValue({
       data: dataAboutHome
     })
@@ -43,9 +45,10 @@ export default function AboutUsHome() {
         autoComplete="off"
       >
         <Form.Item name="data" label="Data"
-          rules={[{ required: true, message: 'Please input your username!' }]}
+          rules={[{ required: true, message: 'Please input your data!' }]}
         >
-          <Input />
+          <TextArea autoSize />
+          {/* <TextArea placeholder="Autosize height based on content lines" autoSize /> */}
         </Form.Item>
         <Form.Item
           wrapperCol={{ offset: 8, span: 16 }}
