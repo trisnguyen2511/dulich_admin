@@ -10,6 +10,7 @@ import DataHeader from "./pages/DataHeader/DataHeader";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
 import AboutUsHome from "./pages/AboutUsHome/AboutUsHome";
 import AboutUsDetail from "./pages/AboutUsDetail/AboutUsDetail";
+import ChangePassword from "./pages/ChangePassword/ChangePassword";
 import Blog from "./pages/Blog/Blog";
 
 function ProtectedRoute() {
@@ -49,6 +50,7 @@ export default function useRouteElement() {
                 { path: "dataHeader", element: <DataHeader /> },
                 { path: "aboutUsHome", element: <AboutUsHome /> },
                 { path: "aboutUsDetail", element: <AboutUsDetail /> },
+                { path: "changePassword", element: <ChangePassword /> },
                 { path: "blog", element: <Blog /> },
               ]
             },

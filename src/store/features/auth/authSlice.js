@@ -43,14 +43,14 @@ const authSlice = createSlice({
         toast.error("Đăng ký thất bại");
       }
     });
-    builder.addCase(registerAccount.pending, (state, action) => {});
+    builder.addCase(registerAccount.pending, (state, action) => { });
 
     builder.addCase(loginAccount.fulfilled, (state, action) => {
       const { user } = action.payload;
       state.isAuthenticated = true;
       state.user = user;
       state.user = getUserFormLC();
-    
+
     });
     builder.addCase(loginAccount.rejected, (state, action) => {
 

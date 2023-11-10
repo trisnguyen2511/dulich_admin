@@ -19,6 +19,7 @@ export default function DataFooter() {
       _id: dataFooter._id,
       title: dataFooter.title,
       phoneNumber: dataFooter.phoneNumber,
+      address: dataFooter.address,
       email: dataFooter.email,
       companyName: dataFooter.companyName,
     });
@@ -70,6 +71,18 @@ export default function DataFooter() {
           {
             required: true,
             message: 'Please input your E-mail!',
+          },
+        ]}
+      >
+        <Input />
+      </Form.Item>
+      <Form.Item
+        name="address"
+        label="Address"
+        rules={[
+          {
+            required: true,
+            message: 'Please input your address!',
           },
         ]}
       >

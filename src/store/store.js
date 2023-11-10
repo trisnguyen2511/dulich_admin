@@ -4,6 +4,7 @@ import tourSlice from './features/tour/tourSlice';
 import dataFooterSlice from './features/DataFooter/dataFooter';
 import dataHeaderSlice from './features/DataHeader/dataHeader';
 import aboutSlice from './features/about/aboutSlice'
+import changePassword from './features/ChangePassword/ChangePassword'
 import blogSlice from './features/blog/blogSlide'
 
 
@@ -14,6 +15,7 @@ export const store = configureStore({
     dataFooter: dataFooterSlice,
     dataHeader: dataHeaderSlice,
     about: aboutSlice,
+    changePassword: changePassword,
     blog: blogSlice
   },
 });

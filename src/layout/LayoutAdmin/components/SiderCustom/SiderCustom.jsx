@@ -81,6 +81,15 @@ export default function SiderCustom() {
       ),
       label: "Blog",
     },
+    {
+      key: "changePassword",
+      icon: (
+        <NavLink to={"changePassword"}>
+          <FileTextOutlined />
+        </NavLink>
+      ),
+      label: "Change Password",
+    },
   ];
 
   return (
